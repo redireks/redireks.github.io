@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MultiShop - Online Shop Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">  
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/173324f0ea.js" crossorigin="anonymous"></script>
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+  .navigacija {
+    background-color: #111111;
+    padding: 15px 0;
+  }
+
+  .filter-klasa .filter-link:hover{
+    background-color: white;
+}
+  
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid mb-30 navigacija">
+        <div class="row px-xl-5">
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg  navbar-light py-3 py-lg-0 px-0">
+                    <a href="" class="text-decoration-none d-block d-lg-none">
+                        <span class="h1 text-uppercase text-light  px-2">Plišani</span>
+                        <span class="h1 text-uppercase text-light bg-primary px-2 ml-n1">Ugao</span>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="index.html" class="nav-item nav-link"><strong>Biserna Kutija</strong></a>
+                            <a style="color: white;" data-toggle="modal" data-target="#exampleModal-form" class="nav-item nav-link"><strong>Kontakt</strong></a>
+                            
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="flex items-center min-h-screen bg-gray-100 dark:bg-gray-900">
+            <div class="container mx-auto">
+              <div style="display: inline-flex;" class="max-w-md mx-auto my-5 bg-white p-5 rounded-md shadow-sm">
+                <div class="form-telo m-4">
+                    <p style="margin-top: -4em;margin-bottom: 1em;">Imate pitanja, želite dobiti dodatne informacije ili poručiti nešto iz naše ponude? Slobodno nas kontaktirajte putem ovog obrasca. 
+                        Naš tim je tu da vam pruži podršku i odgovori na sve vaše upite. </p>
+                  <form  action="https://api.web3forms.com/submit" method="POST" id="form">
+                    <input type="hidden" name="access_key" value="519aba1e-343a-4fd1-aed9-0eeb53fd2f64" />
+                    <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+                    <input type="checkbox" name="botcheck" id="" style="display: none;" />
+                    <div style=" display: inline-block;margin: auto;" class="mb-3">
+                      <label style="padding-bottom: 0.5em;border-bottom: 1px solid gray;" for="name" class="block mb-2 font-medium text-sm text-gray-600 dark:text-gray-400">Ime i Prezime&nbsp;&nbsp;&nbsp;</label>
+                      <input type="text" name="name" id="name" placeholder="Petar Petrović" required class="formaime py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    </div>
+                    <div style="display: block; margin: auto;" class="mb-3">
+                      <label style="padding-bottom: 0.5em;border-bottom: 1px solid gray;" for="email" class="block mb-2 font-medium text-sm text-gray-600 dark:text-gray-400">Email adresa&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                      <input type="text" name="email" id="email" placeholder="email@company.com" required class="formakontakt py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    </div>
+                    <div style="display: block; margin: auto;" class="mb-12">
+                      <textarea rows="5" name="message" id="message" placeholder="Vaša Poruka \nVaša Adresa \nŠifra Proizvoda" class="formatext py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <button style="margin-top: 1em; background-color:#59ab6e; border: 1px solid gray;" type="submit" class="w-full px-5 py-3 text-white focus:outline-none">
+                        Pošalji
+                      </button>
+                    </div>
+                    <p class="text-base text-center text-gray-400" id="result"></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+
+    <!-- Carousel Start -->
+            <div class="col-lg-4">
+                <div class="product-offer mb-30" style="height: 200px;">
+                    <a href="/MalaAutoArena/index.html"><img class="img-fluid" src="/MalaAutoArena/assets/img/mala-auto-arena.png" alt=""></a>
+                </div>
+                <div class="product-offer mb-30" style="height: 200px;">
+                    <a href="/index.html"><img class="img-fluid" src="/assets/img/Kuhinja Snova, Vaša Realnost1-1.png" alt=""></a>    
+                </div>
+                <div class="product-offer mb-30" style="height: 200px;">
+                    <a href="/index.html"><img class="img-fluid" src="/PlisaniUgao/img/plisani-ugao.png" alt=""></a>
+                </div>
+                <div class="product-offer mb-30" style="height: 200px;">
+                    <a href="/index.html"><img class="img-fluid" src="/ZelenaKolekcija/img/Zelena Kolekcija.png" alt=""></a>
+                </div>
+            </div>
+    <!-- Carousel End -->
+
+
+<h2 class="obavestenje-naslov-h2">Naša Posvećenost Pristupačnim Cenama i Vašem Strpljenju</h2>
+    
+
+<p class="obavestenje-top">Na "Plišani Ugao" smo posvećeni pružanju visokokvalitetnih proizvoda po najpristupačnijim cenama. 
+Kako bismo zadržali naše cene što je moguće niže, usvojili smo jedinstveni model u kojem proizvode naručujemo direktno od naših dobavljača čim vi napravite kupovinu.</p>
+
+<div class="obavestenje">
+<p class="obavestenje-pasus"><b>Šta Ovo Znači za Vas?</b><br><br>
+Kada napravite narudžbinu, započinjemo proces obezbeđivanja proizvoda za vas. Ovaj način nam omogućava da vam ponudimo neodoljive cene. 
+Međutim, dolazi uz određenu žrtvu - vreme isporuke od 2-3 nedelje.</p>
+<div class="vr"></div>
+<p class="obavestenje-pasus obavestenje-pasus-sredina"><b>Zašto Duže Vreme Isporuke?</b><br><br>
+Naručivanjem direktno od naših dobavljača i održavanjem malog inventara izbegavamo troškove skladištenja. Ovo direktno rezultira u uštedama koje vam prosleđujemo.</p>
+
+<p class="obavestenje-pasus"><b>Vaše Razumevanje Je Bitno:</b><br><br>
+Shvatamo da čekanje na vašu kupovinu može biti izazovno u današnjem brzom svetu. 
+Međutim, vaše strpljenje nam omogućava da nastavimo da vam pružamo izuzetne ponude na proizvodima koje volite.</p>
+
+
+</div>
+
+<hr class="razdelilac">
+
+<ul class="kategorije">
+        <div class="filter-klasa col-sm">
+            <a class="h3 text-decoration-none filter-link" data-filter="all">Sve</a>
+        </div>
+
+        <div class="filter-klasa col-sm">
+            <a id="cesmeid" class="h3 text-decoration-none filter-link" data-filter="narukvice">
+                Narukvice
+            </a>
+        </div>
+
+        <div class="filter-klasa col-sm">
+            <a id="cesmeid" class="h3 text-decoration-none filter-link" data-filter="mindjuse">
+                Minđuše
+            </a>
+        </div>
+        <div class="filter-klasa col-sm">
+            <a id="cesmeid" class="h3 text-decoration-none filter-link" data-filter="ogrlice">
+                Ogrlice
+            </a>
+        </div>
+
+        <div class="filter-klasa col-sm">
+            <a id="cesmeid" class="h3 text-decoration-none filter-link" data-filter="prstenje">
+                Prstenje
+            </a>
+        </div>
+</ul>  
+
+
+    <!-- Products Start -->
+    <div class="container-fluid pt-5 pb-3">
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Artikli</span></h2>
+        <div class="row px-xl-5">
+
+<!-- ARTIKAL 1-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item ogrlice">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/BK001.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK001" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK001" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/BK001.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK001" class="h6 text-decoration-none text-truncate" href=""> Set nakita sa biserima i dijamantima. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>990RSD</h5><h6 class="text-muted ml-2">Šifra: BK001</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 2-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item narukvice">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/BK002.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK002" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK002" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/BK002.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK002" class="h6 text-decoration-none text-truncate" href=""> Plava perlasta narukvica sa Fatimom. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>990RSD</h5><h6 class="text-muted ml-2">Šifra: BK002</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 3-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item narukvice">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/BK003.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK003" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK003" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/BK003.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK003" class="h6 text-decoration-none text-truncate" href=""> Modna narukvica sa 4 različite boje kamenja. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>990RSD</h5><h6 class="text-muted ml-2">Šifra: BK003</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 4-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item narukvice">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/BK004.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK004" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK004" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/BK004.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK004" class="h6 text-decoration-none text-truncate" href=""> Modna narukvica sa 4 različite boje kamenja. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>990RSD</h5><h6 class="text-muted ml-2">Šifra: BK004</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 5-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item narukvice">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/BK005.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK005" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK005" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/BK005.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK005" class="h6 text-decoration-none text-truncate" href=""> Modna narukvica sa 4 različite boje kamenja. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>990RSD</h5><h6 class="text-muted ml-2">Šifra: BK005</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 6-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item narukvice">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/BK006.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK006" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK006" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/BK006.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK006" class="h6 text-decoration-none text-truncate" href=""> Modna narukvica sa 4 različite boje kamenja. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>990RSD</h5><h6 class="text-muted ml-2">Šifra: BK006</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 7-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item mindjuse">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/BK007.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK007" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK007" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/BK007.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK007" class="h6 text-decoration-none text-truncate" href=""> Jednostavne naušnice u obliku šupljih zvezda. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>290RSD</h5><h6 class="text-muted ml-2">Šifra: BK007</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 8-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item mindjuse">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/BK008.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK008" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK008" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/BK008.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK008" class="h6 text-decoration-none text-truncate" href=""> Preuveličane naušnice u obliku velikih kapljica. <br>Boje: Zlatna, Srebrna </a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>390RSD</h5><h6 class="text-muted ml-2">Šifra: BK008</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 9-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item mindjuse">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/BK009.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK009" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK009" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/BK009.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK009" class="h6 text-decoration-none text-truncate" href="">Nepravilne naušnice koje prate geometrijski stil. <br>Boje: Zlatna, Srebrna</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>390RSD</h5><h6 class="text-muted ml-2">Šifra: BK009</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 10-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/BK010.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK010" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK010" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/BK010.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK010" class="h6 text-decoration-none text-truncate" href=""> Retro modni prsten otvorenog geometrijskog dizajna i <br> prsten u trendu jednostavnog stila. <br>Boje: Zlatna, Srebrna </a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>990RSD</h5><h6 class="text-muted ml-2">Šifra: BK010</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 11-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/BK011.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK011" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK011" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/BK011.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK011" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK011</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+      
+        </div>
+    </div>
+    <!-- Products End -->
+
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-secondary mt-5 pt-5">
+        <div class="row px-xl-5 pt-5">
+            <div class="col-md-4 mb-5 pr-3 pr-xl-5">
+                <h5 class="text-secondary text-uppercase mb-4">Kontaktirajte Nas</h5>
+                <p class="mb-4">Stojimo vam na raspolaganju za sva pitanja ili dodatne informacije - slobodno nas kontaktirajte!</p>
+            </div>
+
+            <div class="col-md-4 pt-4">
+                <ul class="list-unstyled text-light footer-link-list pb-3 border-light">
+                    <li><a class="text-decoration-none" href="/shop.html">Mala Auto Arena</a></li>
+                    <li><a class="text-decoration-none" href="#">Kuhinjski Kutak</a></li>
+                    <li><a class="text-decoration-none" href="/contact.html">Plišani Ugao</a></li>
+                    <li><a class="text-decoration-none" href="#">Biserna Kutija</a></li>
+                    <li><a class="text-decoration-none" href="/shop.html">Zelena Kolekcija</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <p>Zapratite nas na društvenim mrežama kako biste uvek bili u toku sa najnovijim proizvodima</p>
+                <h6 class="text-secondary text-uppercase mt-4 mb-3">Zapratite Nas</h6>
+                <div class="d-flex">
+                    <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <div class="col-md-6 px-xl-0">
+                <p class="mb-md-0 text-center text-md-left text-secondary">
+                    &copy; <a class="text-primary" href="#">Domain</a>. All Rights Reserved. Designed
+                    by
+                    <a style="color: #ffcb0d;" class="text-primary" href="https://htmlcodex.com">HTML Codex</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        
+        $(document).ready(function() {
+          // Show all items initially
+          $(".item").show();
+        
+          // Add click event to filter links
+          $(".filter-link").click(function() {
+            var filter = $(this).data("filter");
+        
+            // Show/hide items based on selected filter
+            if (filter === "all") {
+              $(".item").show();
+            } else {
+              $(".item").hide();
+              $("." + filter).show();
+            }
+          });
+        });
+
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+var textAreas = document.getElementsByTagName('textarea');
+
+Array.prototype.forEach.call(textAreas, function(elem) {
+    elem.placeholder = elem.placeholder.replace(/\\n/g, '\n');
+});
+    </script>
+</body>
+
+</html>

@@ -7,11 +7,11 @@ Custom Css
 .obavestenje{
     display: flex;
     text-align: center;
-    margin-top: 5em;
+    margin-top: 1em;
 }
 .obavestenje-top{
     display: block;
-    width: 35%;
+    width: 50%;
     text-align: center;
     margin: auto;
 }
@@ -71,12 +71,12 @@ Custom Css
     z-index: 1;
   }
   }
-  @media (max-width:730px) {
+@media (max-width:730px) {
   
   .obavestenje{
       display: flex;
       text-align: center;
-      margin-top: 5em;
+      margin-top: em;
   }
   .obavestenje-top{
       display: block;
