@@ -150,13 +150,21 @@ body {
 }
 }
 @media (max-width:730px) {
-.filter-klasa{
-  width: 30%;
-}  
-.kategorije{
-  display: inline-flex;
-  margin-left: -2em;
-}
+  .filter-klasa{
+    width: 45%;
+    display: inline-flex;
+    margin: auto;
+    padding: 1%;
+  } 
+  .filter-klasa a{
+    font-size: 1em;
+  }  
+  .kategorije{
+    margin: auto;
+    margin-left: -1.6em;
+    width: 100%;
+    color: white;
+  }
 .kategorije div{
   margin: auto;
   text-align: center;
