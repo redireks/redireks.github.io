@@ -113,6 +113,22 @@ body {
 }
 
 @media (min-width:730px) {
+  
+.modal-content {
+  max-width: 86em;
+  margin-top: 0;
+  margin: auto;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: 0;
+}
+
+.modal-content img{
+  width: 35em;
+  margin: 1%;
+}
   .obavestenje-pasus-sredina{
     border-left: 1px solid #ba8300;
     border-right: 1px solid #ba8300;
@@ -164,6 +180,22 @@ body {
 }
 }
 @media (max-width:730px) {
+  
+.modal-content {
+  max-width: 80%;
+  margin-top: 0;
+  margin: auto;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: 0;
+}
+
+.modal-content img{
+  width: 100%;
+  margin-bottom: 1em;
+}
 .filter-klasa{
   width: 45%;
   display: inline-flex;
@@ -317,14 +349,6 @@ body {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
 }
 
 /* Caption of Modal Image */
@@ -5759,15 +5783,6 @@ a.close.disabled {
   content: none;
 }
 
-.modal-content {
-  max-width: 80%;
-  margin: auto;
-  pointer-events: auto;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  outline: 0;
-}
 /* Dodatni stilovi za zatvaranje moda u gornjem desnom uglu */
 .close {
   position: fixed;
@@ -5842,7 +5857,7 @@ a.close.disabled {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 500px;
+    max-width: 120em;
     margin: 1.75rem auto;
   }
   .modal-dialog-scrollable {
