@@ -26,11 +26,17 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
+  .modal img{
+    width: 100%;
+    height: auto;
+  }
   .navigacija {
     background-color: #111111;
     padding: 15px 0;
   }
-
+  .hidden {
+    display: none;
+}
   .filter-klasa .filter-link:hover{
     background-color: white;
 }
@@ -144,6 +150,7 @@ Međutim, vaše strpljenje nam omogućava da nastavimo da vam pružamo izuzetne 
 
 </div>
 
+
 <hr class="razdelilac">
 
 <ul class="kategorije">
@@ -179,8 +186,17 @@ Međutim, vaše strpljenje nam omogućava da nastavimo da vam pružamo izuzetne 
     <!-- Products Start -->
     <div class="container-fluid pt-5 pb-3">
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Artikli</span></h2>
-        <div class="row px-xl-5">
+        <div id="productContainer" class="row px-xl-5">
 
+            <div class="col-lg-12 mb-4">
+                <div style="margin: auto;width: 50%;" class="input-group">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Pretraga proizvoda...">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="clearSearch">x</button>
+                    </div>
+                </div>
+            </div>
+            
 <!-- ARTIKAL 1-->
 <div class="col-lg-3 col-md-4 col-sm-6 pb-1 item ogrlice">
     <div class="product-item bg-light mb-4">
@@ -255,7 +271,7 @@ Međutim, vaše strpljenje nam omogućava da nastavimo da vam pružamo izuzetne 
                 </div>
         </div>
         <div class="text-center py-4">
-                <a data-toggle="modal" data-target="#BK003" class="h6 text-decoration-none text-truncate" href=""> Modna narukvica sa 4 različite boje kamenja. <br>&nbsp;</a>
+                <a data-toggle="modal" data-target="#BK003" class="h6 text-decoration-none text-truncate" href=""> Modna narukvica sa zelenom bojom kamenja. <br>&nbsp;</a>
             <div class="d-flex align-items-center justify-content-center mt-2">
                 <h5>990RSD</h5><h6 class="text-muted ml-2">Šifra: BK003</h6>
             </div>
@@ -282,7 +298,7 @@ Međutim, vaše strpljenje nam omogućava da nastavimo da vam pružamo izuzetne 
                 </div>
         </div>
         <div class="text-center py-4">
-                <a data-toggle="modal" data-target="#BK004" class="h6 text-decoration-none text-truncate" href=""> Modna narukvica sa 4 različite boje kamenja. <br>&nbsp;</a>
+                <a data-toggle="modal" data-target="#BK004" class="h6 text-decoration-none text-truncate" href=""> Modna narukvica sa crnom bojom kamenja. <br>&nbsp;</a>
             <div class="d-flex align-items-center justify-content-center mt-2">
                 <h5>990RSD</h5><h6 class="text-muted ml-2">Šifra: BK004</h6>
             </div>
@@ -309,7 +325,7 @@ Međutim, vaše strpljenje nam omogućava da nastavimo da vam pružamo izuzetne 
                 </div>
         </div>
         <div class="text-center py-4">
-                <a data-toggle="modal" data-target="#BK005" class="h6 text-decoration-none text-truncate" href=""> Modna narukvica sa 4 različite boje kamenja. <br>&nbsp;</a>
+                <a data-toggle="modal" data-target="#BK005" class="h6 text-decoration-none text-truncate" href=""> Modna narukvica sa plavom bojom kamenja. <br>&nbsp;</a>
             <div class="d-flex align-items-center justify-content-center mt-2">
                 <h5>990RSD</h5><h6 class="text-muted ml-2">Šifra: BK005</h6>
             </div>
@@ -336,7 +352,7 @@ Međutim, vaše strpljenje nam omogućava da nastavimo da vam pružamo izuzetne 
                 </div>
         </div>
         <div class="text-center py-4">
-                <a data-toggle="modal" data-target="#BK006" class="h6 text-decoration-none text-truncate" href=""> Modna narukvica sa 4 različite boje kamenja. <br>&nbsp;</a>
+                <a data-toggle="modal" data-target="#BK006" class="h6 text-decoration-none text-truncate" href=""> Modna narukvica sa crvenom bojom kamenja. <br>&nbsp;</a>
             <div class="d-flex align-items-center justify-content-center mt-2">
                 <h5>990RSD</h5><h6 class="text-muted ml-2">Šifra: BK006</h6>
             </div>
@@ -363,7 +379,7 @@ Međutim, vaše strpljenje nam omogućava da nastavimo da vam pružamo izuzetne 
                 </div>
         </div>
         <div class="text-center py-4">
-                <a data-toggle="modal" data-target="#BK007" class="h6 text-decoration-none text-truncate" href=""> Jednostavne naušnice u obliku šupljih zvezda. <br>&nbsp;</a>
+                <a data-toggle="modal" data-target="#BK007" class="h6 text-decoration-none text-truncate" href=""> Jednostavne mindjuše u obliku šupljih zvezda. <br>&nbsp;</a>
             <div class="d-flex align-items-center justify-content-center mt-2">
                 <h5>290RSD</h5><h6 class="text-muted ml-2">Šifra: BK007</h6>
             </div>
@@ -390,7 +406,7 @@ Međutim, vaše strpljenje nam omogućava da nastavimo da vam pružamo izuzetne 
                 </div>
         </div>
         <div class="text-center py-4">
-                <a data-toggle="modal" data-target="#BK008" class="h6 text-decoration-none text-truncate" href=""> Preuveličane naušnice u obliku velikih kapljica. <br>Boje: Zlatna, Srebrna </a>
+                <a data-toggle="modal" data-target="#BK008" class="h6 text-decoration-none text-truncate" href=""> Preuveličane mindjuše u obliku velikih kapljica. <br>Boje: Zlatna, Srebrna </a>
             <div class="d-flex align-items-center justify-content-center mt-2">
                 <h5>390RSD</h5><h6 class="text-muted ml-2">Šifra: BK008</h6>
             </div>
@@ -417,7 +433,7 @@ Međutim, vaše strpljenje nam omogućava da nastavimo da vam pružamo izuzetne 
                 </div>
         </div>
         <div class="text-center py-4">
-                <a data-toggle="modal" data-target="#BK009" class="h6 text-decoration-none text-truncate" href="">Nepravilne naušnice koje prate geometrijski stil. <br>Boje: Zlatna, Srebrna</a>
+                <a data-toggle="modal" data-target="#BK009" class="h6 text-decoration-none text-truncate" href="">Nepravilne mindjuše koje prate geometrijski stil. <br>Boje: Zlatna, Srebrna</a>
             <div class="d-flex align-items-center justify-content-center mt-2">
                 <h5>390RSD</h5><h6 class="text-muted ml-2">Šifra: BK009</h6>
             </div>
@@ -474,6 +490,539 @@ Međutim, vaše strpljenje nam omogućava da nastavimo da vam pružamo izuzetne 
                 <a data-toggle="modal" data-target="#BK011" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
             <div class="d-flex align-items-center justify-content-center mt-2">
                 <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK011</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 12-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/667f2d8ed00ae50f0d2287722279bfd4eec315c8_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK012" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK012" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/667f2d8ed00ae50f0d2287722279bfd4eec315c8_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK012" class="h6 text-decoration-none text-truncate" href="">Mašni mačak sa cirkonima<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>590RSD</h5><h6 class="text-muted ml-2">Šifra: BK012</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 13-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/d9e43e48115cae219c39b43a79b0f5eee907c4c8_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK013" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK013" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/d9e43e48115cae219c39b43a79b0f5eee907c4c8_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK013" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1190RSD</h5><h6 class="text-muted ml-2">Šifra: BK013</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 14-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/4e3ff5cedf9ca4642d80a22ad7702d114510ff0e_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK014" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK014" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/4e3ff5cedf9ca4642d80a22ad7702d114510ff0e_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK014" class="h6 text-decoration-none text-truncate" href="">Zlatne kvadratne minđuše <br>Boje: Svetlo Pava, Bela, Crna, Crvena, Plava, <br>
+                    Zelena, Roze, Žuta, Ljubičasta, Šareno 
+                </a>
+                <a style="cursor: pointer;" data-toggle="modal" data-target="#exampleModal-boje14" class="nav-item nav-link">Primeri Boja</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK014</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal-boje14" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+      <div style="padding: 1em;" class="modal-content">
+        <h3>Veličine:</h3>  <br> 
+        <img src="https://img.joomcdn.net/4e3ff5cedf9ca4642d80a22ad7702d114510ff0e_original.jpeg" alt="">
+        <img src="https://img.joomcdn.net/4e3ff5cedf9ca4642d80a22ad7702d114510ff0e_original.jpeg" alt="">
+        <img src="https://img.joomcdn.net/4e3ff5cedf9ca4642d80a22ad7702d114510ff0e_original.jpeg" alt="">
+        <img src="https://img.joomcdn.net/4e3ff5cedf9ca4642d80a22ad7702d114510ff0e_original.jpeg" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+    </div>
+  </div>
+<!-- ARTIKAL 15-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK015" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK015" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK015" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK015</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 16-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK016" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK016" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK016" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK016</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 17-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK017" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK017" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK017" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK017</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 18-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK018" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK018" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK018" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK018</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 19-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK019" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK019" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK019" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK019</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 20-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK020" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK020" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK020" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK020</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 21-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK021" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK021" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK021" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK021</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 22-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK022" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK022" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK022" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK022</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 23-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK023" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK023" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK023" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK023</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 24-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK024" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK024" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK024" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK024</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 25-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK025" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK025" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK025" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK025</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 26-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK026" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK026" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK026" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK026</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 27-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK027" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK027" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK027" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK027</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 28-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK028" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK028" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK028" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK028</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL 29-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK029" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK029" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK029" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK029</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ARTIKAL BK030-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item prstenje">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#BK029" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="BK029" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="https://img.joomcdn.net/2231de477d47973063e6e4c1b41b9bfa0431dd89_original.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#BK029" class="h6 text-decoration-none text-truncate" href="">Set od 10 prstenova u evropskom i američkom retro stilu. <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1290RSD</h5><h6 class="text-muted ml-2">Šifra: BK029</h6>
             </div>
         </div>
     </div>
@@ -550,6 +1099,7 @@ Međutim, vaše strpljenje nam omogućava da nastavimo da vam pružamo izuzetne 
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/filter.js"></script>
     <script>
         
         $(document).ready(function() {
@@ -580,6 +1130,8 @@ Array.prototype.forEach.call(textAreas, function(elem) {
     elem.placeholder = elem.placeholder.replace(/\\n/g, '\n');
 });
     </script>
+    </script>
+    
 </body>
 
 </html>

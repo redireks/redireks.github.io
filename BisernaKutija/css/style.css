@@ -5760,17 +5760,23 @@ a.close.disabled {
 }
 
 .modal-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  max-width: 80%;
+  margin: auto;
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   outline: 0;
 }
-
+/* Dodatni stilovi za zatvaranje moda u gornjem desnom uglu */
+.close {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1001; /* Postavljamo viši z-index kako bismo bili sigurni da se preklapa sa modalom */
+}
 .modal-backdrop {
   position: fixed;
   top: 0;
